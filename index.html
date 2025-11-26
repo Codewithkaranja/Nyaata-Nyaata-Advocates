@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -28,8 +33,8 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="blog.html">Legal Insights</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -41,14 +46,14 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="container">
-        <h1>Your Trusted Legal Partners in Kenya</h1>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1><span id="typewriter"></span></h1>
         <p>
-          With over 17 years of legal excellence, Mutinda and Musyoka Company
-          Advocates provides strategic counsel and robust representation to
-          protect your rights and business interests.
+          17+ years of legal expertise, protecting your rights, business, and
+          future.
         </p>
         <a href="contact.html" class="btn">Schedule a Consultation</a>
       </div>
@@ -374,7 +379,13 @@
         </div>
       </div>
     </footer>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254723562484" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
