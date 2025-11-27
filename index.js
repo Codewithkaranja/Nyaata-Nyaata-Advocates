@@ -81,5 +81,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeEffect();
 });
+function animateCountUp(el) {
+  const target = +el.getAttribute("data-target");
+  const speed = 100;
+  const increment = target / speed;
+  let current = 0;
 
+  const updateCount = () => {
+    current += increment;
+    if (current < target) {
+      el.textContent = Math.ceil(current);
+      requestAnimationFrame(updateCount);
+    } else {
+      el.textContent = target + "+"; // Add plus at the end
+    }
+  };
+
+  updateCount();
+}
+
+// Trigger only when visible
+const statNumbers = document.querySelectorAll(".stat-number");
+let started = false;
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting && !started) {
+      statNumbers.forEach((num) => animateCountUp(num));
+      started = true;
+    }
+  },
+  { threshold: 0.5 }
+);
+
+observer.observe(document.querySelector(".stats"));
+
+  const swiper = new Swiper(".services-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 200,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
 

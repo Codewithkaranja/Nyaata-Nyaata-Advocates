@@ -243,36 +243,52 @@ header {
 
 
       /* Services Section */
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        
-      }
+/* Make card content horizontal */
+.service-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
-      .services-grid h3{
-        color: #b38b59;
-      }
+/* Icon - keep elegant */
+.service-icon {
+  font-size: 45px;
+  color: var(--gold);
+  min-width: 60px;
+  text-align: center;
+}
 
-      .service-card {
-        background-color: var(--navy);
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-        text-align: center;
-        color: var(--light-gray);
-      }
+/* Text section */
+.service-text {
+  text-align: left;
+}
 
-      .service-card:hover {
-        transform: translateY(-10px);
-      }
+.service-text h3 {
+  color: var(--gold);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
 
-      .service-icon {
-        font-size: 40px;
-        color: var(--gold);
-        margin-bottom: 20px;
-      }
+.service-text p {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  line-height: 1.6;
+}
+
+/* Keep the existing card styling (only adding flex support) */
+.service-card {
+  background: rgba(10, 27, 60, 0.92);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 420px;
+  margin: 0 auto;
+  
+  color: rgba(255, 255, 255, 0.877);
+}
+
+
 
       /* About Section */
       .about {
@@ -649,4 +665,15 @@ copyright,
     .hero, .whatsapp-float, .mobile-menu {
         display: none !important;
     }
+}
+@media (max-width: 600px) {
+  .service-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-text {
+    text-align: center;
+  }
 }
