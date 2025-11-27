@@ -27,7 +27,7 @@
       h4,
       h5 {
         font-family: "Garamond", "Times New Roman", serif;
-        color: var(--navy);
+        color: var(--gold);
         margin-bottom: 1rem;
       }
 
@@ -195,13 +195,14 @@ nav ul li .btn:hover {
         background-size: cover;
         background-position: center;
         color: var(--white);
-        padding: 150px 0 80px;
+        padding: 280px 0 80px;
         text-align: center;
+        height: 70vh;
       }
 
       .page-header h1 {
         font-size: 2.5rem;
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
@@ -217,7 +218,7 @@ nav ul li .btn:hover {
       }
 
       .breadcrumb li a {
-        color: var(--gold);
+        color: white;
         text-decoration: none;
       }
 
@@ -269,14 +270,14 @@ nav ul li .btn:hover {
 
       .featured-content {
         padding: 40px;
-        background-color: var(--white);
+        background-color: var(--navy);
       }
 
       .post-meta {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-        color: #666;
+        color: #a8a7a7;
         font-size: 0.9rem;
       }
 
@@ -309,7 +310,7 @@ nav ul li .btn:hover {
 
       .featured-content p {
         margin-bottom: 20px;
-        color: #666;
+        color:rgba(255, 255, 255, 0.822);
       }
 
       /* Blog Posts Grid */
@@ -325,7 +326,7 @@ nav ul li .btn:hover {
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s ease;
-        background-color: var(--white);
+        background-color: var(--navy);
       }
 
       .post-card:hover {
@@ -358,7 +359,7 @@ nav ul li .btn:hover {
       }
 
       .post-content p {
-        color: #666;
+        color: #e7e4e4e7;
         margin-bottom: 15px;
         font-size: 0.95rem;
       }
@@ -608,7 +609,7 @@ nav ul li .btn:hover {
       }
 
       .cta h2 {
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
@@ -619,7 +620,7 @@ nav ul li .btn:hover {
 
      /* ===== Footer Section ===== */
 footer {
-  background-color: var(--charcoal);
+  background-color: black;
   color: var(--white);
   padding: 70px 0 30px;
   font-family: "Poppins", sans-serif;
@@ -801,7 +802,7 @@ copyright,
         }
 
         .page-header {
-          padding: 130px 0 60px;
+          padding: 280px 0 60px;
         }
 
         .page-header h1 {

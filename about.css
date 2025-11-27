@@ -27,7 +27,7 @@
       h4,
       h5 {
         font-family: "Garamond", "Times New Roman", serif;
-        color: var(--navy);
+        color: var(--gold);
         margin-bottom: 1rem;
       }
 
@@ -183,13 +183,14 @@ nav ul li .btn:hover {
         background-size: cover;
         background-position: center;
         color: var(--white);
-        padding: 150px 0 80px;
+        padding: 280px 0 80px;
         text-align: center;
+        height: 70vh;
       }
 
       .page-header h1 {
         font-size: 2.5rem;
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
@@ -211,7 +212,10 @@ nav ul li .btn:hover {
 
       /* About Intro */
       .about-intro {
-        background-color: var(--light-gray);
+         background: linear-gradient(rgba(238, 239, 240, 0.9), rgba(248, 249, 250, 0.9)),
+          url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
       }
 
       .about-content {
@@ -223,6 +227,7 @@ nav ul li .btn:hover {
 
       .about-text h2 {
         margin-bottom: 20px;
+        color: #b38b59;
       }
 
       .about-image img {
@@ -240,12 +245,20 @@ nav ul li .btn:hover {
 
       .mission-card,
       .vision-card {
-        background-color: var(--white);
+        background-color: var(--navy);
         border-radius: 8px;
         padding: 40px 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         text-align: center;
         border-top: 4px solid var(--gold);
+        color: rgba(255, 255, 255, 0.781);
+      }
+
+      .vision-card h2{
+        color: var(--gold);
+      }
+      .mission-card h2{
+        color: var(--gold);
       }
 
       .mission-icon,
@@ -257,7 +270,10 @@ nav ul li .btn:hover {
 
       /* Team Section */
       .team {
-        background-color: var(--light-gray);
+        background-color: var(--navy);
+      }
+      .team h2{
+        color: var(--gold);
       }
 
       .team-grid {
@@ -321,14 +337,18 @@ nav ul li .btn:hover {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
       }
+      .values-grid h3{
+       color: var(--gold);
+      }
 
       .value-card {
         text-align: center;
         padding: 30px 20px;
-        background-color: var(--white);
+        background-color: var(--navy);
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s ease;
+        color: rgba(255, 255, 255, 0.822);
       }
 
       .value-card:hover {
@@ -337,13 +357,15 @@ nav ul li .btn:hover {
 
       .value-icon {
         font-size: 40px;
-        color: var(--navy);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
       /* History Section */
       .history {
-        background-color: var(--light-gray);
+          background: linear-gradient(rgba(0, 0, 0, 0.959), rgba(7, 7, 7, 0.959)),
+          url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        
       }
 
       .timeline {
@@ -379,11 +401,12 @@ nav ul li .btn:hover {
       }
 
       .timeline-content {
-        background-color: var(--white);
+        background-color: var(--navy);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         position: relative;
+        color: rgba(255, 255, 255, 0.842);
       }
 
       .timeline-content:after {
@@ -441,7 +464,7 @@ nav ul li .btn:hover {
       }
 
       .cta h2 {
-        color: var(--white);
+        color:var(--gold);
         margin-bottom: 20px;
       }
 
@@ -452,7 +475,7 @@ nav ul li .btn:hover {
 
          /* ===== Footer Section ===== */
 footer {
-  background-color: var(--charcoal);
+  background-color: black;
   color: var(--white);
   padding: 70px 0 30px;
   font-family: "Poppins", sans-serif;
@@ -654,7 +677,7 @@ copyright,
         }
 
         .page-header {
-          padding: 130px 0 60px;
+          padding: 280px 0 60px;
         }
 
         .page-header h1 {

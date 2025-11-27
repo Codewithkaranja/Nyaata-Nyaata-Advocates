@@ -27,7 +27,7 @@
       h4,
       h5 {
         font-family: "Garamond", "Times New Roman", serif;
-        color: var(--navy);
+        color: var(--gold);
         margin-bottom: 1rem;
       }
 
@@ -188,13 +188,14 @@ nav ul li .btn:hover {
         background-size: cover;
         background-position: center;
         color: var(--white);
-        padding: 150px 0 80px;
+        padding: 280px 0 80px;
         text-align: center;
+        height:70vh;
       }
 
       .page-header h1 {
         font-size: 2.5rem;
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
@@ -230,7 +231,7 @@ nav ul li .btn:hover {
       }
 
       .contact-card {
-        background-color: var(--white);
+        background-color: var(--navy);
         border-radius: 8px;
         padding: 40px 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -256,7 +257,7 @@ nav ul li .btn:hover {
 
       .contact-card p {
         margin-bottom: 20px;
-        color: #666;
+        color: rgba(255, 255, 255, 0.849);
       }
 
       /* Contact Form & Info */
@@ -265,24 +266,30 @@ nav ul li .btn:hover {
         grid-template-columns: 2fr 1fr;
         gap: 50px;
         align-items: start;
+           background: linear-gradient(rgba(7, 22, 36, 0.9), rgba(6, 46, 87, 0.9)),
+          url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
       }
 
       .contact-form-container {
-        background-color: var(--white);
+        background-color: var(--navy);
         border-radius: 8px;
         padding: 40px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        color:rgba(255, 255, 255, 0.788);
       }
 
       .form-group {
         margin-bottom: 25px;
+        
       }
 
       .form-group label {
         display: block;
         margin-bottom: 8px;
         font-weight: 500;
-        color: var(--navy);
+        color:var(--gold);
       }
 
       .form-control {
@@ -327,6 +334,7 @@ nav ul li .btn:hover {
       .info-content h4 {
         margin-bottom: 5px;
         font-size: 1.1rem;
+        color: var(--gold);
       }
 
       .office-hours {
@@ -353,7 +361,7 @@ nav ul li .btn:hover {
 
       /* Map Section */
       .map-section {
-        background-color: var(--light-gray);
+        background-color: var(--navy);
       }
 
       .map-container {
@@ -392,7 +400,7 @@ nav ul li .btn:hover {
       }
 
       .emergency-section h2 {
-        color: var(--white);
+        color: var(--gold);
         margin-bottom: 20px;
       }
 
@@ -442,7 +450,7 @@ nav ul li .btn:hover {
 
            /* ===== Footer Section ===== */
 footer {
-  background-color: var(--charcoal);
+  background-color: black;
   color: var(--white);
   padding: 70px 0 30px;
   font-family: "Poppins", sans-serif;
@@ -622,7 +630,7 @@ copyright,
         }
 
         .page-header {
-          padding: 130px 0 60px;
+          padding: 280px 0 60px;
         }
 
         .page-header h1 {
