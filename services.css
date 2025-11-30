@@ -262,10 +262,13 @@ nav ul li .btn:hover {
 }
 
 /* Page Header */
+
+
+/* Page Header */
 .page-header {
   background: linear-gradient(135deg, rgba(119, 4, 4, 0.85), rgba(84, 102, 21, 0.75)),
               url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80");
-  background-size: cover;
+ background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: var(--white);
@@ -277,6 +280,7 @@ nav ul li .btn:hover {
   justify-content: center;
   position: relative;
   overflow: hidden;
+ 
 }
 
 .page-header::before {
@@ -296,10 +300,14 @@ nav ul li .btn:hover {
 
 .page-header h1 {
   font-size: 3.5rem;
-  color: var(--white);
+  color: rgb(233, 201, 24);
   margin-bottom: 25px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
+
 
 .breadcrumb {
   display: flex;
@@ -335,11 +343,51 @@ nav ul li .btn:hover {
   background: rgba(84, 102, 21, 0.3);
 }
 
+/* Background Zoom Animation */
+@keyframes headerZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+/* Text Fade & Slide Animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the background animation */
+.page-header {
+  animation: headerZoom 12s ease-in-out infinite alternate;
+  position: relative;
+}
+
+/* Animate heading and breadcrumb */
+.page-header h1,
+.page-header .breadcrumb {
+  animation: fadeSlideUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Delay breadcrumb slightly for smooth staggered animation */
+.page-header .breadcrumb {
+  animation-delay: 0.4s;
+}
 /* Services Overview */
 .services-overview {
   background: linear-gradient(135deg, #ffffff 0%, var(--light-gray) 100%);
   position: relative;
   overflow: hidden;
+  padding: 80px 0;
 }
 
 .services-intro {
@@ -354,31 +402,44 @@ nav ul li .btn:hover {
   line-height: 1.8;
 }
 
+/* Hide original grid */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 40px;
+  display: none;
 }
 
-.service-card {
+/* Swiper Container */
+.services-swiper {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/* Swiper Slide / Service Card */
+.swiper-slide.service-card {
   background: linear-gradient(135deg, var(--mutindamaroon) 0%, var(--mutindamaroon-dark) 100%);
-  border-radius: 20px;
-  padding: 50px 40px;
-  box-shadow: 0 20px 50px rgba(119, 4, 4, 0.15);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 25px;
+  padding: 50px 35px;
+  box-shadow: 0 25px 60px rgba(119, 4, 4, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
   text-align: center;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Card Hover */
+.swiper-slide.service-card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 35px 80px rgba(119, 4, 4, 0.35);
+}
+
+/* Card gradient lines */
 .service-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(90deg, var(--mutindagreen), var(--gold));
 }
 
@@ -398,13 +459,9 @@ nav ul li .btn:hover {
   left: 0;
 }
 
-.service-card:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 30px 70px rgba(119, 4, 4, 0.3);
-}
-
+/* Icon */
 .service-icon {
-  font-size: 65px;
+  font-size: 70px;
   color: var(--mutindagreen);
   margin-bottom: 25px;
   transition: all 0.4s ease;
@@ -412,13 +469,14 @@ nav ul li .btn:hover {
   z-index: 2;
 }
 
-.service-card:hover .service-icon {
+.swiper-slide.service-card:hover .service-icon {
   color: var(--gold);
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotate(5deg);
 }
 
+/* Title */
 .service-card h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
   color: var(--mutindagreen);
   position: relative;
@@ -443,24 +501,77 @@ nav ul li .btn:hover {
   width: 80px;
 }
 
+/* Description */
 .service-card p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 25px;
   line-height: 1.7;
+  font-size: 1.05rem;
   position: relative;
   z-index: 2;
-  font-size: 1.05rem;
 }
+
+/* Buttons */
+.service-card .btn-outline {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.service-card .btn-outline:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--mutindagreen);
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--mutindagreen);
+  color: #fff;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: var(--mutindagreen);
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Active slide scale effect for depth */
+.swiper-slide-active {
+  transform: scale(1.08);
+}
+
 
 /* Detailed Services */
 .service-detail {
   margin-bottom: 80px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
-  border-radius: 20px;
+  background: linear-gradient(rgba(23, 46, 68, 0.521), rgba(248, 249, 250, 0.9)),
+          url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+   border-radius: 20px;
   padding: 60px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 40px rgb(10, 0, 0);
   position: relative;
   overflow: hidden;
+  color:rgb(29, 1, 1);
 }
 
 .service-detail::before {
@@ -661,7 +772,8 @@ nav ul li .btn:hover {
 }
 
 .process .section-title {
-  color: var(--white);
+  color: rgb(233, 201, 24);
+  font-weight: 300;
 }
 
 .process-steps {
@@ -815,7 +927,8 @@ nav ul li .btn:hover {
 }
 
 .cta h2 {
-  color: var(--white);
+ color: rgb(233, 201, 24);
+ font-weight: 300;
   font-size: 2.8rem;
   margin-bottom: 25px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -1161,3 +1274,27 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.service-card .btn-outline {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.service-card .btn-outline:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.service-card .btn-outline {
+  position: relative;
+  z-index: 2;
+}
+
