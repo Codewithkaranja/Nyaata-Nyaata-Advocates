@@ -328,8 +328,9 @@ nav ul li .btn:hover {
   font-size: 2.5rem;
   color: var(--mutindagreen);
   margin-bottom: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: "Garamond", "Times New Roman", serif;
+  font-weight: 400;
+  
   letter-spacing: 1px;
 }
 
@@ -608,8 +609,9 @@ nav ul li .btn:hover {
 }
 
 .about-content h1 {
-  color: var(--white);
+  color: (--mutindagreen);
   font-size: 2.5rem;
+  
 }
 
 .about-content p {
@@ -796,9 +798,10 @@ nav ul li .btn:hover {
 }
 
 .cta h1 {
-  color: var(--gold);
+  color: var(--mutindagreen);
   margin-bottom: 20px;
   font-size: 2.5rem;
+  font-weight: 300;
 }
 
 .cta p {
@@ -846,15 +849,16 @@ nav ul li .btn:hover {
 
 .cta .contact-icon {
   font-size: 28px;
-  color: var(--gold);
+  color: var(--mutindagreen);
   min-width: 40px;
   text-align: center;
 }
 
 .cta .contact-item h2 {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   margin: 0;
-  color: var(--white);
+  color:var(--mutindagreen);
+  font-weight:400 ;
 }
 
 .cta .contact-item p {
