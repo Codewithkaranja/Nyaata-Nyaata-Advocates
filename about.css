@@ -1133,7 +1133,7 @@ footer {
   width: 150px;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /*filter: brightness(0) invert(1);*/
   transition: all 0.4s ease;
 }
 
